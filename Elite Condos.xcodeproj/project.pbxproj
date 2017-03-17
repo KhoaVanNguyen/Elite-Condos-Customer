@@ -19,6 +19,8 @@
 		D2154FBB1DE91D5600D0DF23 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2154FBA1DE91D5600D0DF23 /* Order.swift */; };
 		D2159A0A1E7B787E006517B2 /* PopupPhotoPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2159A091E7B787E006517B2 /* PopupPhotoPickerVC.swift */; };
 		D2159A0C1E7B7AEA006517B2 /* PopupPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2159A0B1E7B7AEA006517B2 /* PopupPhotoCell.swift */; };
+		D2159A0E1E7B8A70006517B2 /* OrderApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2159A0D1E7B8A70006517B2 /* OrderApi.swift */; };
+		D2159A111E7B8B3D006517B2 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2159A101E7B8B3D006517B2 /* Api.swift */; };
 		D23B2FF51DE095BA00EF6A19 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23B2FF41DE095BA00EF6A19 /* CartCell.swift */; };
 		D23ECC161DF1A9F2002B6E1D /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23ECC151DF1A9F2002B6E1D /* CosmosDistrib.swift */; };
 		D24459241DDDED4200F51EE6 /* RandomString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24459231DDDED4200F51EE6 /* RandomString.swift */; };
@@ -68,6 +70,8 @@
 		D2154FBA1DE91D5600D0DF23 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		D2159A091E7B787E006517B2 /* PopupPhotoPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupPhotoPickerVC.swift; sourceTree = "<group>"; };
 		D2159A0B1E7B7AEA006517B2 /* PopupPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupPhotoCell.swift; sourceTree = "<group>"; };
+		D2159A0D1E7B8A70006517B2 /* OrderApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderApi.swift; sourceTree = "<group>"; };
+		D2159A101E7B8B3D006517B2 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		D23B2FF41DE095BA00EF6A19 /* CartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
 		D23ECC151DF1A9F2002B6E1D /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
 		D24459231DDDED4200F51EE6 /* RandomString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomString.swift; sourceTree = "<group>"; };
@@ -149,6 +153,15 @@
 			name = CustomViews;
 			sourceTree = "<group>";
 		};
+		D2159A0F1E7B8B2F006517B2 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				D2159A0D1E7B8A70006517B2 /* OrderApi.swift */,
+				D2159A101E7B8B3D006517B2 /* Api.swift */,
+			);
+			name = Api;
+			sourceTree = "<group>";
+		};
 		D2502C091DC8E2DF009189E7 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +186,7 @@
 				D25556C91DD9C837004E7649 /* Elite Condos.entitlements */,
 				D2502C151DC8E2DF009189E7 /* AppDelegate.swift */,
 				D25556C31DD9B9C4004E7649 /* DataService.swift */,
+				D2159A0F1E7B8B2F006517B2 /* Api */,
 				D28EE7C91DD95AE500BCE1E9 /* Helpers */,
 				D2BF5B091DCEE2C4002534EC /* Lib */,
 				D25556CD1DDA7A78004E7649 /* Models */,
@@ -406,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D28EE7C51DD95A9600BCE1E9 /* FancyBtn.swift in Sources */,
+				D2159A0E1E7B8A70006517B2 /* OrderApi.swift in Sources */,
 				D2BC647E1E7A24C80031FA31 /* DescriptionVC.swift in Sources */,
 				D28EE7C71DD95A9600BCE1E9 /* FancyView.swift in Sources */,
 				D205619F1DD70A4D008B7EB5 /* CircleImage.swift in Sources */,
@@ -431,6 +446,7 @@
 				D2BC647C1E7A23500031FA31 /* OrderDescription.swift in Sources */,
 				D28EE7CD1DD9731000BCE1E9 /* LoginVC.swift in Sources */,
 				D2159A0A1E7B787E006517B2 /* PopupPhotoPickerVC.swift in Sources */,
+				D2159A111E7B8B3D006517B2 /* Api.swift in Sources */,
 				D20E96161E79924400A8F3EE /* SubCategoryVC.swift in Sources */,
 				D28EE7CF1DD9762900BCE1E9 /* StartVC.swift in Sources */,
 				D25556C81DD9C56D004E7649 /* Errors.swift in Sources */,

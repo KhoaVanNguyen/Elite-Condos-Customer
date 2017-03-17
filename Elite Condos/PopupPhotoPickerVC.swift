@@ -11,7 +11,7 @@ import UIKit
 class PopupPhotoPickerVC: UIViewController {
     
     @IBOutlet weak var subView: UIView!
-    var images: [UIImage] = []
+    
     
     let imagePicker: UIImagePickerController = UIImagePickerController()
     var subViewTapped = false
@@ -36,7 +36,7 @@ class PopupPhotoPickerVC: UIViewController {
     }
     
     @IBAction func deleteAllBtnPressed(_ sender: Any) {
-        self.images = []
+        Api.Order.images = []
         collectionView.reloadData()
     }
    
@@ -48,20 +48,28 @@ extension PopupPhotoPickerVC: UICollectionViewDataSource{
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count + 1
+        if Api.Order.images == nil {
+            return 1
+        }
+        else {
+            return  Api.Order.images.count + 1
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopupPhotoCell", for: indexPath) as! PopupPhotoCell
         
+        guard Api.Order.images != nil else {
+            return cell
+        }
         
-        if indexPath.row == images.count {
+        if indexPath.row == Api.Order.images.count {
             let img = UIImage(named: "add.png")
             cell.configureCell(img: img!)
         }
         else {
-            let img = images[indexPath.row]
+            let img = Api.Order.images[indexPath.row]
             cell.configureCell(img: img)
         }
         
@@ -72,7 +80,12 @@ extension PopupPhotoPickerVC: UICollectionViewDataSource{
 
 extension PopupPhotoPickerVC: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.row == images.count {
+        
+        guard Api.Order.images != nil else {
+            return 
+        }
+        
+        if indexPath.row == Api.Order.images.count {
             present(imagePicker, animated: true, completion: nil)
         }
     }
@@ -94,8 +107,8 @@ extension PopupPhotoPickerVC: UIImagePickerControllerDelegate, UINavigationContr
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let img = info[UIImagePickerControllerOriginalImage] as? UIImage{
-            self.images.append(img)
-            self.collectionView.reloadData()
+            Api.Order.images.append(img)
+            collectionView.reloadData()
         }
         dismiss(animated: true, completion: nil)
     }

@@ -13,6 +13,16 @@ class UserApi{
     
     
     
+    // update Token 
+    func updateTokenToDatabase(token: String, onSuccess: @escaping () -> Void){
+        if let user = FIRAuth.auth()?.currentUser {
+            FirRef.CUSTOMERS.child(user.uid).updateChildValues(["token": token])
+            onSuccess()
+        }
+    }
+    
+    
+    
     // update user location
     
     func updateUserLocation(lat: Double, long: Double, onSuccess: @escaping () -> Void){

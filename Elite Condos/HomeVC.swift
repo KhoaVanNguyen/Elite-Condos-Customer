@@ -14,15 +14,19 @@ class HomeVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     let services = getServiceData()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let token = UserDefaults.standard.value(forKey: "token") as? String{
+            Api.User.updateTokenToDatabase(token: token, onSuccess: { 
+                print("Update token in HomeVC with: \(token)")
+            })
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        tableView.delegate = self 
-
-//        if token != "" {
-//            FirRef.CUSTOMERS.child(Api.User.currentUid()).updateChildValues(["token": token])
-//        }
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -64,10 +68,8 @@ extension HomeVC: UITableViewDataSource{
         else{
             return UITableViewCell()
         }
-        
     }
 }
-
 extension HomeVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "HomeToSubCategory", sender:
@@ -75,6 +77,6 @@ extension HomeVC: UITableViewDelegate{
             "title": services[indexPath.row].name,
             "id" : services[indexPath.row].id!
             ] as [String:Any]
-                )
+        )
     }
 }

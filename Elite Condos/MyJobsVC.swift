@@ -26,6 +26,9 @@ class MyJobsVC: UIViewController {
         fetchOrders(orderStatus: ORDER_STATUS.NOTACCEPTED.hashValue)
         
     }
+    
+    
+    /// get order base on their status
     func fetchOrders(orderStatus: Int){
         
         ProgressHUD.show("Đang tải dữ liệu...")

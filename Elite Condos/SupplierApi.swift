@@ -11,9 +11,26 @@ import Firebase
 import CoreLocation
 class SupplierApi{
     
-    
+    /**
+     
+     Reference to Supplier node in Firebase
+     
+     - Author: Khoa Nguyen
+     
+     */
     
     let ref = FIRDatabase.database().reference().child("suppliers")
+    
+    
+    /**
+     Download one supplier's data base on supplier's id
+     
+     - Parameter id: The supplier's id
+     - Parameter completion: The function executes after downloading supplier's image. We get the supplier data from this parameter.
+     
+     - Author: Khoa Nguyen
+     
+     */
     
     func observeSupplier(id: String, completion: @escaping (Supplier) -> Void){
         ref.child(id).observe(.value, with: { (snapshot) in

@@ -219,7 +219,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "159"
             endingLineNumber = "159"
-            landmarkName = "updateEmail(email:onError:onSuccess:)"
+            landmarkName = "updatePhone(phone:onSuccess:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

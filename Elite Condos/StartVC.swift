@@ -8,6 +8,9 @@
 
 import UIKit
 import FirebaseAuth
+/** 
+ 
+*/
 class StartVC: UIViewController {
     
     override func viewDidLoad() {

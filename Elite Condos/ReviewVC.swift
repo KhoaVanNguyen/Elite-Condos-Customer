@@ -52,7 +52,7 @@ class ReviewVC: UIViewController {
         let username = FIRAuth.auth()?.currentUser?.email
         let currenId = Api.User.currentUid()
         
-        Api.User.getImageProfile { (imgUrl) in
+        Api.User.getImageProfileUrl { (imgUrl) in
             let reviewData: [String:Any] =
                 [
                     "time" : getCurrentTime(),

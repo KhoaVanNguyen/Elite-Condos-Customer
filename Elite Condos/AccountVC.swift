@@ -34,6 +34,8 @@ class AccountVC: UIViewController {
         avatarImg.isUserInteractionEnabled = true
         ProgressHUD.show("")
         
+       
+        
         Api.User.downloadUserImage(onError: { (error) in
             print(error)
         }) { (img) in

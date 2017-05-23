@@ -8,14 +8,56 @@
 
 import Foundation
 
+
+/**
+ We follow MVC model.
+ This class is for data model: Order
+ - Author: Khoa Nguyen
+ 
+ */
 class Order  {
     
+    /**
+     Order's id
+     - Author: Khoa Nguyen
+     
+     */
     var id : String?
+    /**
+     Customer's Id
+     - Author: Khoa Nguyen
+     
+     */
     var customerId : String?
+    /**
+     Service's name
+     - Author: Khoa Nguyen
+     
+     */
     var serviceName : String?
+    /**
+     Supplier's id
+     - Author: Khoa Nguyen
+     
+     */
     var supplierId : String?
+    /**
+     Employee's id
+     - Author: Khoa Nguyen
+     
+     */
     var employeeId : String?
+    /**
+     The status of order
+     - Author: Khoa Nguyen
+     
+     */
     var status : Int?
+    /**
+     Order's initial time.
+     - Author: Khoa Nguyen
+     
+     */
     var time: String?
     
     //    var id : String{
@@ -38,6 +80,13 @@ class Order  {
     //        return _status
     //    }
     
+    /**
+     The constructor.
+     - Parameter id: The id of order
+     - Parameter data: A ***Dictionary*** with order's data. We need to unwrap it.
+     - Author: Khoa Nguyen
+     
+     */
     init(id : String, data : Dictionary<String,Any>) {
         self.id = id
         if let customerId = data["customerId"] as? String{

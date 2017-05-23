@@ -9,19 +9,56 @@
 import Foundation
 
 
-
+/**
+ The default service list
+ - Author: Khoa Nguyen
+ 
+ */
 struct ServiceData{
     
+    /**
+     Service's id
+     - Author: Khoa Nguyen
+     
+     */
     var id: String?
+    /**
+     Service's name
+     - Author: Khoa Nguyen
+     
+     */
     var name: String!
+    /**
+     Service's image url
+     - Author: Khoa Nguyen
+     
+     */
     var imgUrl: String!
+    /**
+     Service's sub category
+     - Author: Khoa Nguyen
+     
+     */
     var subCategory: [ServiceData]?
+    
+    
+    /**
+     Constructor function
+     - Author: Khoa Nguyen
+     
+     */
     
     init(name: String, imgUrl: String, subCategories: [ServiceData]?) {
         self.name = name
         self.imgUrl = imgUrl
         self.subCategory = subCategories
     }
+    
+    /**
+     Constructor function
+     - Author: Khoa Nguyen
+     
+     */
     
     init(id: String, name: String, imgUrl: String, subCategories: [ServiceData]?) {
         self.id = id
@@ -32,6 +69,11 @@ struct ServiceData{
 }
 
 
+/**
+ Helper function to return a array of available services
+ - Author: Khoa Nguyen
+ 
+ */
 func getServiceData() -> [ServiceData]{
     // Electrical
     

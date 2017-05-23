@@ -8,10 +8,38 @@
 
 import UIKit
 
+
+/**
+ We follow MVC model. 
+ This class is subclass of UITableViewCell
+ This class is for Service Cell that is used tableview of HomeVC and SubCategoryVC
+ - Author: Khoa Nguyen
+ 
+ */
+
 class ServiceCell: UITableViewCell {
 
+    
+    /**
+     Service's name
+     - Author: Khoa Nguyen
+     
+     */
     @IBOutlet weak var serviceName: UILabel!
+    
+    /**
+     Service's image
+     - Author: Khoa Nguyen
+     
+     */
+    
     @IBOutlet weak var serviceImage: UIImageView!
+    
+    /**
+     A feature of Swift, when this variable has value, a function will executes immediately
+     - Author: Khoa Nguyen
+     
+     */
     
     var service: ServiceData?{
         didSet{
@@ -19,10 +47,22 @@ class ServiceCell: UITableViewCell {
         }
     }
     
+    /**
+        Initialization code
+     - Author: Khoa Nguyen
+     
+     */
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
     }
+    
+    /**
+     Set name and image for controls.
+     - Author: Khoa Nguyen
+     
+     */
     
     func configureCell(){
         if let name = service?.name{

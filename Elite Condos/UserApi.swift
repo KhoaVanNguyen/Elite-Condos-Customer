@@ -9,11 +9,15 @@
 import Foundation
 import Firebase
 
-class UserApi{
-    
 
-    
-    
+/**
+ All the network code related to user.
+ - Author: Khoa Nguyen
+ 
+ */
+
+class UserApi{
+
     /**
      Get current user's id. We use the API from Firebase Auth to return a user, then return its uid
      

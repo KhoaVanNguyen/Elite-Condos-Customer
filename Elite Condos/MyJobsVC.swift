@@ -9,6 +9,14 @@
 import UIKit
 import ProgressHUD
 import Firebase
+
+/**
+ 
+ List all orders of a user ( customer ) base on status. User can click on different buttons to change the order's status.
+ - Author: Khoa Nguyen
+ 
+ */
+
 class MyJobsVC: UIViewController {
     
 //    @IBOutlet weak var segment: UISegmentedControl!
@@ -39,6 +47,14 @@ class MyJobsVC: UIViewController {
     
     
     var supplierName = ""
+    
+    /**
+     
+     The built-in function of UIViewController. This function executes after a screen was loaded
+     
+     - Author: Khoa Nguyen
+     
+     */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -181,6 +197,69 @@ class MyJobsVC: UIViewController {
     
 }
 
+extension MyJobsVC: Customer_OrderCellDelegate{
+    
+    /**
+     
+     When a cell downloads order's information. It will fetch the supplier's name base on supplier's ID. When this process finish, the cell will notify us so that we can use the supplier's name.
+     
+     - Parameter name: The supplier's name
+     - Author: Khoa Nguyen
+     
+     */
+    
+    func getSupplierName(name: String) {
+        supplierName = name
+    }
+    
+}
+
+extension MyJobsVC: UITableViewDataSource{
+    
+    /**
+     
+     The built-in function of UITableViewDataSource. This function determines
+     the number of section in the tableview
+     
+     - Author: Khoa Nguyen
+     
+     */
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    /**
+     
+     The built-in function of UITableViewDataSource. This function determines
+     the number of rows in a section in the tableview
+     
+     - Author: Khoa Nguyen
+     
+     */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return orders.count
+    }
+    
+    /**
+     
+     The built-in function of UITableViewDataSource. This function determines
+     what UIs will be displayed in a row in the tableview
+     
+     - Author: Khoa Nguyen
+     
+     */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
+        -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCell", for: indexPath) as! OrderCell
+            cell.delegate = self
+            cell.order = orders[indexPath.row]
+            return cell
+    }
+}
+
 extension MyJobsVC: UITableViewDelegate{
     
     /**
@@ -210,66 +289,6 @@ extension MyJobsVC: UITableViewDelegate{
     }
 }
 
-extension MyJobsVC: Customer_OrderCellDelegate{
-    
-    /**
-     
-     When a cell downloads order's information. It will fetch the supplier's name base on supplier's ID. When this process finish, the cell will notify us so that we can use the supplier's name.
-     
-     - Parameter name: The supplier's name
-     - Author: Khoa Nguyen
-     
-     */
-    
-    func getSupplierName(name: String) {
-        supplierName = name
-    }
-    
-}
 
-extension MyJobsVC: UITableViewDataSource{
-    
-    /**
-     
-     The built-in function of UITableViewDataSource. This function determines
-     the number of section in tableview
-     
-     - Author: Khoa Nguyen
-     
-     */
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    /**
-     
-     The built-in function of UITableViewDataSource. This function determines
-     the number of rows in a section in tableview
-     
-     - Author: Khoa Nguyen
-     
-     */
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return orders.count
-    }
-    
-    /**
-     
-     The built-in function of UITableViewDataSource. This function determines
-     what UIs will be displayed in a row
-     
-     - Author: Khoa Nguyen
-     
-     */
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
-        -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCell", for: indexPath) as! OrderCell
-            cell.delegate = self
-            cell.order = orders[indexPath.row]
-            return cell
-    }
-}
+
 

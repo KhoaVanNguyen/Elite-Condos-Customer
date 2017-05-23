@@ -219,8 +219,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "159"
             endingLineNumber = "159"
-            landmarkName = "updatePhone(phone:onSuccess:)"
-            landmarkType = "7">
+            landmarkName = "UserApi"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -235,7 +235,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
             endingLineNumber = "69"
-            landmarkName = "finishBtn(_:)"
+            landmarkName = "cancelBtn(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -251,7 +251,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
             endingLineNumber = "65"
-            landmarkName = "cancelBtn(_:)"
+            landmarkName = "rejectedBtn_TouchInside(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -267,7 +267,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
             endingLineNumber = "62"
-            landmarkName = "rejectedBtn_TouchInside(_:)"
+            landmarkName = "ongoingBtn(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -283,7 +283,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
             endingLineNumber = "59"
-            landmarkName = "ongoingBtn(_:)"
+            landmarkName = "waitingBtn(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

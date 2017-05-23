@@ -11,6 +11,9 @@ import Firebase
 
 class UserApi{
     
+
+    
+    
     /**
      Get current user's id. We use the API from Firebase Auth to return a user, then return its uid
      

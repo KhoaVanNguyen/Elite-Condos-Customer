@@ -13,9 +13,31 @@ class MyJobsVC: UIViewController {
     
 //    @IBOutlet weak var segment: UISegmentedControl!
     
+    
+    
+    /**
+       UITableView
+     - Author: Khoa Nguyen
+     
+     */
+    
     @IBOutlet weak var tableView: UITableView!
-    let currendId = Api.User.currentUid()
+    
+    /**
+     List of orders. We will download orders from Firebase and store to this variable
+     - Author: Khoa Nguyen
+     
+     */
     var orders = [Order]()
+    
+    /**
+    
+     Supplier's name
+     - Author: Khoa Nguyen
+     
+     */
+    
+    
     var supplierName = ""
     
     override func viewDidLoad() {
@@ -27,12 +49,17 @@ class MyJobsVC: UIViewController {
         
     }
     
+    /**
+     Fetch orders base on their status. Then refresh tableview to show new data.
+     - Parameter orderStatus: The status of order
+     - Author: Khoa Nguyen
+     
+     */
     
-    /// get order base on their status
     func fetchOrders(orderStatus: Int){
         
         ProgressHUD.show("Đang tải dữ liệu...")
-        FirRef.ORDERS.queryOrdered(byChild: "customerId").queryEqual(toValue: currendId).observe(.value, with: { (snapshots) in
+        FirRef.ORDERS.queryOrdered(byChild: "customerId").queryEqual(toValue: Api.User.currentUid()).observe(.value, with: { (snapshots) in
             if let snapshots = snapshots.children.allObjects as? [FIRDataSnapshot]{
                 self.orders.removeAll()
                 self.tableView.reloadData()
@@ -55,22 +82,70 @@ class MyJobsVC: UIViewController {
         
         
     }
+    
+    /**
+     Reload tableview with new orders with status: ***NOTACCEPTED***
+     - Parameter sender: The button when the user presses
+     - Author: Khoa Nguyen
+     
+     */
+    
+    
     @IBAction func waitingBtn(_ sender: Any) {
         fetchOrders(orderStatus: ORDER_STATUS.NOTACCEPTED.hashValue)
     }
+    
+    /**
+     Reload tableview with new orders with status: ***ONGOING***
+     - Parameter sender: The button when the user presses
+     - Author: Khoa Nguyen
+     
+     */
+    
     @IBAction func ongoingBtn(_ sender: Any) {
         fetchOrders(orderStatus: ORDER_STATUS.ONGOING.hashValue)
     }
+    
+    /**
+     Reload tableview with new orders with status: ***REJECTED***
+     - Parameter sender: The button when the user presses
+     - Author: Khoa Nguyen
+     
+     */
+    
     @IBAction func rejectedBtn_TouchInside(_ sender: Any) {
         fetchOrders(orderStatus: ORDER_STATUS.REJECTED.hashValue)
     }
+    
+    /**
+     Reload tableview with new orders with status: ***CANCEL***
+     - Parameter sender: The button when the user presses
+     - Author: Khoa Nguyen
+     
+     */
+    
     @IBAction func cancelBtn(_ sender: Any) {
         fetchOrders(orderStatus: ORDER_STATUS.CANCEL.hashValue)
     }
     
+    /**
+     Reload tableview with new orders with status: ***FINISHED***
+     - Parameter sender: The button when the user presses
+     - Author: Khoa Nguyen
+     
+     */
+    
     @IBAction func finishBtn(_ sender: Any) {
         fetchOrders(orderStatus: ORDER_STATUS.FINISHED.hashValue)
     }
+    
+    /**
+     Prepare data and logic code when it's about to move to next screen
+     - Parameter segue: From this screen, we just can go to MyJobToPaymentConfimation
+     - Parameter sender: sender will be a Dictionary with order's data
+     - Author: Khoa Nguyen
+     
+     */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MyJobToPaymentConfimation"{
@@ -92,6 +167,13 @@ class MyJobsVC: UIViewController {
             }
         }
     }
+    
+    /**
+     Go back to previous screen
+     - Author: Khoa Nguyen
+     
+     */
+    
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -100,6 +182,14 @@ class MyJobsVC: UIViewController {
 }
 
 extension MyJobsVC: UITableViewDelegate{
+    
+    /**
+    
+     The built-in function of UITableViewDelegate. This function executes when user clicks on a specific row.
+     
+     - Author: Khoa Nguyen
+     
+     */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let status = orders[indexPath.row].status
@@ -121,6 +211,16 @@ extension MyJobsVC: UITableViewDelegate{
 }
 
 extension MyJobsVC: Customer_OrderCellDelegate{
+    
+    /**
+     
+     When a cell downloads order's information. It will fetch the supplier's name base on supplier's ID. When this process finish, the cell will notify us so that we can use the supplier's name.
+     
+     - Parameter name: The supplier's name
+     - Author: Khoa Nguyen
+     
+     */
+    
     func getSupplierName(name: String) {
         supplierName = name
     }
@@ -128,12 +228,42 @@ extension MyJobsVC: Customer_OrderCellDelegate{
 }
 
 extension MyJobsVC: UITableViewDataSource{
+    
+    /**
+     
+     The built-in function of UITableViewDataSource. This function determines
+     the number of section in tableview
+     
+     - Author: Khoa Nguyen
+     
+     */
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
+    /**
+     
+     The built-in function of UITableViewDataSource. This function determines
+     the number of rows in a section in tableview
+     
+     - Author: Khoa Nguyen
+     
+     */
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return orders.count
     }
+    
+    /**
+     
+     The built-in function of UITableViewDataSource. This function determines
+     what UIs will be displayed in a row
+     
+     - Author: Khoa Nguyen
+     
+     */
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
         -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCell", for: indexPath) as! OrderCell

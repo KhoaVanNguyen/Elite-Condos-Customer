@@ -8,8 +8,18 @@
 
 import UIKit
 
+/**
+ Custom UIButton with shadow, rounded corner
+ - Author: Khoa Nguyen
+ 
+ */
 class RoundBtn: UIButton {
 
+    /**
+     Set up
+     - Author: Khoa Nguyen
+     
+     */
     override func awakeFromNib() {
         super.awakeFromNib()
         

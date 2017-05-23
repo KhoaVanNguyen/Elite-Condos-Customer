@@ -23,7 +23,6 @@
 		D2159A111E7B8B3D006517B2 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2159A101E7B8B3D006517B2 /* Api.swift */; };
 		D21DA0821E98CE6C005BE50A /* SupplierApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DA0811E98CE6C005BE50A /* SupplierApi.swift */; };
 		D21DA0841E98D025005BE50A /* SupplierListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DA0831E98D025005BE50A /* SupplierListVC.swift */; };
-		D23B2FF51DE095BA00EF6A19 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23B2FF41DE095BA00EF6A19 /* CartCell.swift */; };
 		D23ECC161DF1A9F2002B6E1D /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23ECC151DF1A9F2002B6E1D /* CosmosDistrib.swift */; };
 		D2411EC31E8CEEFE0022C468 /* PasswordUpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2411EC21E8CEEFE0022C468 /* PasswordUpdateVC.swift */; };
 		D2411EC51E8CFC8C0022C468 /* PasswordForgetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2411EC41E8CFC8C0022C468 /* PasswordForgetVC.swift */; };
@@ -68,7 +67,6 @@
 		D2D66D871E7C15540029345F /* DateTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D66D841E7C15540029345F /* DateTimePicker.swift */; };
 		D2D66D881E7C15540029345F /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D66D851E7C15540029345F /* DateCollectionViewCell.swift */; };
 		D2D66D891E7C15540029345F /* StepCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D66D861E7C15540029345F /* StepCollectionViewFlowLayout.swift */; };
-		D2F5CD4C1DDE932200FC7E42 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F5CD4B1DDE932200FC7E42 /* Employee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,7 +87,6 @@
 		D2159A101E7B8B3D006517B2 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		D21DA0811E98CE6C005BE50A /* SupplierApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierApi.swift; sourceTree = "<group>"; };
 		D21DA0831E98D025005BE50A /* SupplierListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplierListVC.swift; sourceTree = "<group>"; };
-		D23B2FF41DE095BA00EF6A19 /* CartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
 		D23ECC151DF1A9F2002B6E1D /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
 		D2411EC21E8CEEFE0022C468 /* PasswordUpdateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordUpdateVC.swift; sourceTree = "<group>"; };
 		D2411EC41E8CFC8C0022C468 /* PasswordForgetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordForgetVC.swift; sourceTree = "<group>"; };
@@ -138,7 +135,6 @@
 		D2D66D841E7C15540029345F /* DateTimePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimePicker.swift; sourceTree = "<group>"; };
 		D2D66D851E7C15540029345F /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2D66D861E7C15540029345F /* StepCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
-		D2F5CD4B1DDE932200FC7E42 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		EFCDFA6E1F512AFF638BD72C /* Pods_Elite_Condos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Elite_Condos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -239,7 +235,6 @@
 			isa = PBXGroup;
 			children = (
 				D25556CE1DDA7A88004E7649 /* Supplier.swift */,
-				D2F5CD4B1DDE932200FC7E42 /* Employee.swift */,
 				D24459251DDDF2FB00F51EE6 /* Service.swift */,
 				D2154FBA1DE91D5600D0DF23 /* Order.swift */,
 				D20C5CA51E004BFB00D15C92 /* PriceTag.swift */,
@@ -309,7 +304,6 @@
 		D2BF5B0C1DCF1DDD002534EC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D23B2FF41DE095BA00EF6A19 /* CartCell.swift */,
 				D2159A0B1E7B7AEA006517B2 /* PopupPhotoCell.swift */,
 				D20E96111E798C7900A8F3EE /* ServiceCell.swift */,
 				D20E96171E79943500A8F3EE /* SubCategoryCell.swift */,
@@ -491,9 +485,7 @@
 				D20C5CA11E00484200D15C92 /* ServiceListCell.swift in Sources */,
 				D21DA0821E98CE6C005BE50A /* SupplierApi.swift in Sources */,
 				D20E96181E79943500A8F3EE /* SubCategoryCell.swift in Sources */,
-				D2F5CD4C1DDE932200FC7E42 /* Employee.swift in Sources */,
 				D2502C161DC8E2DF009189E7 /* AppDelegate.swift in Sources */,
-				D23B2FF51DE095BA00EF6A19 /* CartCell.swift in Sources */,
 				D20E96121E798C7900A8F3EE /* ServiceCell.swift in Sources */,
 				D28EE7C81DD95A9600BCE1E9 /* RoundBtn.swift in Sources */,
 				D28EE7C61DD95A9600BCE1E9 /* FancyField.swift in Sources */,

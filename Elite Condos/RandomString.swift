@@ -8,6 +8,13 @@
 
 import Foundation
 
+/**
+ Generate a random string.
+ - Parameter length: Length of the string
+ - Returns: a random string
+ - Author: Khoa Nguyen
+ 
+ */
 func randomString(length: Int) -> String {
     
     let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"

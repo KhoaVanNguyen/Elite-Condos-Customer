@@ -8,8 +8,18 @@
 
 import UIKit
 
+/**
+ Custom UITextField with shadow, rounded corner
+ - Author: Khoa Nguyen
+ 
+ */
 class FancyField: UITextField {
 
+    /**
+     Set up
+     - Author: Khoa Nguyen
+     
+     */
     override func awakeFromNib() {
         super.awakeFromNib()
         

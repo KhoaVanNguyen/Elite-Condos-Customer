@@ -7,9 +7,18 @@
 //
 
 import UIKit
-
+/**
+ Custom UIView with shadow, rounded corner
+ - Author: Khoa Nguyen
+ 
+ */
 class FancyView: UIView {
 
+    /**
+     Set up
+     - Author: Khoa Nguyen
+     
+     */
     override func awakeFromNib() {
         super.awakeFromNib()
         

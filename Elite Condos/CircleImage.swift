@@ -7,9 +7,17 @@
 //
 
 import UIKit
-
+/**
+ Custom UIImageView with shadow, rounded corner
+ - Author: Khoa Nguyen
+ 
+ */
 class CircleImage: UIImageView {
-
+    /**
+     Set up
+     - Author: Khoa Nguyen
+     
+     */
     override func awakeFromNib() {
         layer.cornerRadius = self.frame.width / 2
         clipsToBounds = true

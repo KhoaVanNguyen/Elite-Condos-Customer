@@ -10,6 +10,14 @@ import UIKit
 import Firebase
 import ProgressHUD
 
+
+/**
+ 
+  We have to notify to tableview to book the order
+ - Author: Khoa Nguyen
+ 
+ */
+
 protocol SupplierCellDelegate {
     func book(supplierId: String)
 }

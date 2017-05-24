@@ -2,20 +2,70 @@
 //  Review.swift
 //  Elite Condos
 //
-//  Created by Khoa on 4/16/17.
-//  Copyright © 2017 Khoa. All rights reserved.
+//  Created by Nguyen Hien on 4/16/17.
+//  Copyright © 2017 Nguyen Hien. All rights reserved.
 //
 
 import Foundation
+/**
+ We follow MVC model.
+ This class is for data model: Order
+ - Author: Nguyen Hien
+ 
+ */
 class Review{
-    
+    /**
+     username
+     - Author: Nguyen Hien
+     
+     */
     var username: String?
+    
+    /**
+     imgUrl
+     - Author: Nguyen Hien
+     
+     */
     var imgUrl: String?
+    /**
+     moneyAmount
+     - Author: Nguyen Hien
+     
+     */
     var moneyAmount: Double?
+    /**
+     review's content
+     - Author: Nguyen Hien
+     
+     */
     var reviewContent: String?
+    /**
+     rating stars
+     - Author: Nguyen Hien
+     
+     */
     var ratingStars: Double?
+    
+    /**
+     review 's initial time.
+     - Author: Nguyen Hien
+     
+     */
     var time: String?
+    /**
+     id of the review
+     - Author: Nguyen Hien
+     
+     */
     var id: String
+    
+    /**
+     The constructor.
+     - Parameter id: The id of review
+     - Parameter data: A ***Dictionary*** with review's data. We need to unwrap it.
+     - Author:  Nguyen Hien
+     
+     */
     init(id: String, data: [String:Any] ) {
         
         self.id = id

@@ -10,6 +10,11 @@ import UIKit
 import FirebaseAuth
 import ProgressHUD
 
+/**
+ The reference of nodes in Firebase database
+ - Author: Nguyen Hien
+ 
+ */
 class ReviewVC: UIViewController {
     
     /**

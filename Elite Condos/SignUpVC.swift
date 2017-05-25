@@ -9,21 +9,61 @@
 import UIKit
 import Firebase
 import ProgressHUD
+
+/**
+ Đăng ký
+ - Author: Hoang Phan
+ */
+
 class SignUpVC: UIViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate{
     
+    /**
+     TextField lưu mật khẩu người dùng đăng ký
+     - Author: Hoang Phan
+     */
     @IBOutlet weak var passwordTF: FancyField!
+    /**
+     TextField lưu số điện thoại người dùng đăng ký
+     - Author: Hoang Phan
+     */
     @IBOutlet weak var phoneTF: FancyField!
+    /**
+     TextField lưu email người dùng đăng ký
+     - Author: Hoang Phan
+     */
     @IBOutlet weak var emailTF: FancyField!
+    /**
+     TextField lưu tên người dùng đăng ký
+     - Author: Hoang Phan
+     */
     @IBOutlet weak var nameTF: FancyField!
+    /**
+     Profile của người dùng
+     - Author: Hoang Phan
+     */
     @IBOutlet weak var profileImage: CircleImage!
     
-    
+    /**
+     Avatar của người dùng
+     - Author: Hoang Phan
+     */
     @IBOutlet weak var avatarImage: CircleImage!
     
-    
+    /**
+     Biến lưu avatar picker người dùng đăng ký
+     - Author: Hoang Phan
+     */
     var imagePicker : UIImagePickerController!
+    /**
+     Biến lưu avatar picker người dùng đã được chọn chưa
+     - Author: Hoang Phan
+     */
     var pickedImage = false
+    /**
+     Hàm mặc định, load xong sẽ thực hiện
+     - Author: Hoang Phan
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +74,10 @@ UINavigationControllerDelegate{
         setupTextField()
         
     }
+    /**
+     Hàm cài đặt TextField, giao quyền lại cho TextField
+     - Author: Hoang Phan
+     */
     func setupTextField(){
         nameTF.delegate = self
         emailTF.delegate = self
@@ -45,7 +89,12 @@ UINavigationControllerDelegate{
         passwordTF.tag = 2
         phoneTF.tag = 3
     }
-    
+    /**
+     Hàm chọn hình hiển thị
+     - Author: Hoang Phan
+     - Parameter picker: chọn hình
+     - Parameter didFinishPickingMediaWithInfo: thông tin của hình đã được chọn
+     */
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage{
             avatarImage.image = image
@@ -57,7 +106,10 @@ UINavigationControllerDelegate{
         imagePicker.dismiss(animated: true, completion: nil)
         
     }
-    
+    /**
+     Hàm kiểm tra thông tin và đăng ký tài khoản
+     - Author: Hoang Phan
+     */
     @IBAction func signUp(_ sender: Any) {
         
         guard pickedImage == true else {
@@ -107,6 +159,10 @@ UINavigationControllerDelegate{
         
         
     }
+    /**
+     Hàm mặc định của swift, hiển thị thông báo ra ngoài màn hình
+     - Author: Hoang Phan
+     */
     func showAlert(title: String, message : String){
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -118,9 +174,17 @@ UINavigationControllerDelegate{
         present(alert, animated: true, completion: nil)
         
     }
+    /**
+     Hàm click để chọn avatar
+     - Author: Hoang Phan
+     */
     @IBAction func pickAvatar(_ sender: Any) {
         present(imagePicker, animated: true, completion: nil)
     }
+    /**
+     Hàm quay trở lại màn hình trước
+     - Author: Hoang Phan
+     */
     @IBAction func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -128,6 +192,12 @@ UINavigationControllerDelegate{
 }
 
 extension SignUpVC: UITextFieldDelegate{
+    /**
+     Nhấn enter thì xác định con trỏ đang ở vị trí textField nào, và chuyển xuống textField có tag lớn hơn.
+     - Returns: Bool,
+     - Author: Hoang Phan
+     - Parameter textField: Một trong 4 text field nameTF, phoneTF, emailTF, passwordTF
+     */
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if let nextTF = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField{

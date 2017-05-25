@@ -16,12 +16,9 @@ import Firebase
  - Author: Khoa Nguyen
  
  */
-
 class MyJobsVC: UIViewController {
     
 //    @IBOutlet weak var segment: UISegmentedControl!
-    
-    
     
     /**
        UITableView

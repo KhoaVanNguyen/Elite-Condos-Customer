@@ -59,6 +59,9 @@ class UserApi{
      */
     
     func updateUserLocation(lat: Double, long: Double, onSuccess: @escaping () -> Void){
+        
+    
+        
         FirRef.USERS.child(currentUid()).child("locations").updateChildValues(["lat": lat, "long": long])
         
         onSuccess()
@@ -107,6 +110,8 @@ class UserApi{
             let metadata = FIRStorageMetadata()
             metadata.contentType = "image/jpeg"
             
+            
+            
             FirRef.CUSTOMER_AVATAR.child(imgUid).put(imgData, metadata: metadata, completion: { (metaData, error) in
                 if error != nil{
                     onError(error.debugDescription)
@@ -132,6 +137,7 @@ class UserApi{
     func getImageProfileUrl(onSuccess: @escaping (String) -> Void){
         let currentId = Api.User.currentUid()
         FirRef.CUSTOMERS.child(currentId).observeSingleEvent(of: .  value, with: { (snapshot) in
+            
             if let dict = snapshot.value as? [String:Any]{
                 if let imgUrl = dict["avatarUrl"] as? String{
                     onSuccess(imgUrl)

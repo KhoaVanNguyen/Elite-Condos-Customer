@@ -8,21 +8,46 @@
 
 import UIKit
 
-class ServiceListCell: UITableViewCell {
 
+/**
+ We follow MVC model.
+ This class is subclass of UICollectionViewCell
+ This class is for Detail Image Cell that is used collection of OrderDetailVC
+ - Author: Khoa Nguyen
+ 
+ */
+
+class ServiceListCell: UITableViewCell {
+    /**
+     Price label
+     - Author: Khoa Nguyen
+     
+     */
     @IBOutlet weak var priceLbl: UILabel!
+    
+    /**
+     Name of the item label
+     - Author: Khoa Nguyen
+     
+     */
+    
     @IBOutlet weak var nameLbl: UILabel!
+    
+    /**
+     Initialization code
+     - Author: Khoa Nguyen
+     
+     */
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
+    /**
+     Set price for cell
+     - Author: Khoa Nguyen
+     
+     */
     func configureCell(service : Service){
         //priceLbl.text = service.price
         nameLbl.text  = service.name

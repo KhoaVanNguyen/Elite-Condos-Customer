@@ -11,7 +11,7 @@ import FirebaseAuth
 import ProgressHUD
 
 /**
- The reference of nodes in Firebase database
+    After an order is finished, customer can review the supplier
  - Author: Nguyen Hien
  
  */

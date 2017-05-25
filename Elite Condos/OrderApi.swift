@@ -252,8 +252,11 @@ class OrderApi{
      - Parameter completion : the function executes after observing price tag
      - Author: Nguyen Hien
      
+     
      */
     func observePriceTag(orderId: String, completed: @escaping (PriceTag) -> Void){
+
+        
         FirRef.ORDERS.child(orderId).child("pricetags").observe(.childAdded, with: { (snapshot) in
             
             if let dict = snapshot.value as? [String:Any]{

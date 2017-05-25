@@ -28,7 +28,7 @@ class Supplier {
         if let address = data["address"] as? String{
             self.address = address
         }
-        if let logo = data["logoUrl"] as? String{
+        if let logo = data["avatarUrl"] as? String{
             self.logo = logo
         }
         if let email = data["email"] as? String{

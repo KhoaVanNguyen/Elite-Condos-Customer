@@ -19,23 +19,70 @@ import ProgressHUD
  */
 
 protocol SupplierCellDelegate {
+    
+    /**
+     
+     We have to notify to tableview to book the order
+     - Author: Khoa Nguyen
+     
+     */
     func book(supplierId: String)
 }
 
 class SupplierCell: UITableViewCell {
-
+    /**
+     Rating view
+     - Author: Khoa Nguyen
+     
+     */
     @IBOutlet weak var rating: CosmosView!
-    @IBOutlet weak var distance: UILabel!
-    @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var logoImage: UIImageView!
     
+    /**
+     Distance label
+     - Author: Khoa Nguyen
+     
+     */
+    
+    @IBOutlet weak var distance: UILabel!
+    
+    /**
+     Name of the supplier
+     - Author: Khoa Nguyen
+     
+     */
+    
+    @IBOutlet weak var nameLbl: UILabel!
+    
+    /**
+     Supplier's logo
+     - Author: Khoa Nguyen
+     
+     */
+    
+    @IBOutlet weak var logoImage: UIImageView!
+    /**
+     Delegation is a design pattern that enables a class or structure to delegate some of its responsibilities to an instance of another type.
+     In this case: We need to delegate the `book(supplierId: String)` to other class.
+     - Author: Khoa Nguyen
+     
+     */
     var delegate: SupplierCellDelegate?
+    
+    /**
+     A feature of Swift, when this variable has value, a function will executes immediately
+     - Author: Khoa Nguyen
+     
+     */
     var supplier: Supplier?{
         didSet{
             updateView()
         }
     }
-    
+    /**
+     Set information for a supplier
+     - Author: Khoa Nguyen
+     
+     */
     func updateView(){
         ProgressHUD.show("Loading...")
   

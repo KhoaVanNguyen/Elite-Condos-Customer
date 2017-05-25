@@ -9,7 +9,7 @@
 import Foundation
 /**
  We follow MVC model.
- This class is for data model: Order
+ This class is for data model: Review
  - Author: Nguyen Hien
  
  */

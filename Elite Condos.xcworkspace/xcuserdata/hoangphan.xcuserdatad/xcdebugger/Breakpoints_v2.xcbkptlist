@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Elite Condos/SignUpVC.swift"
+            timestampString = "517402317.368964"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "SignUpVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Elite_Condos.SignUpVC.avatarImage.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;Elite_Condos.CircleImage&gt;"
+                  moduleName = "Elite Condos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///DULIEU/BaoCaoCuoiKi/Elite-Condos-Customer/Elite%20Condos/SignUpVC.swift"
+                  timestampString = "517402469.62842"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Elite_Condos.SignUpVC.avatarImage.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;Elite_Condos.CircleImage&gt;"
+                  moduleName = "Elite Condos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///DULIEU/BaoCaoCuoiKi/Elite-Condos-Customer/Elite%20Condos/SignUpVC.swift"
+                  timestampString = "517402469.643965"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Elite_Condos.SignUpVC.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Elite_Condos.SignUpVC"
+                  moduleName = "Elite Condos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///DULIEU/BaoCaoCuoiKi/Elite-Condos-Customer/Elite%20Condos/SignUpVC.swift"
+                  timestampString = "517402469.650317"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "410">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Elite_Condos.SignUpVC.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Elite_Condos.SignUpVC&gt;"
+                  moduleName = "Elite Condos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///DULIEU/BaoCaoCuoiKi/Elite-Condos-Customer/Elite%20Condos/SignUpVC.swift"
+                  timestampString = "517402469.658152"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "300">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
